@@ -136,16 +136,23 @@ main {
 .card h2 { margin-top: 0; }
 .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 6px; }
 
+.schedule .day {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
 .schedule .row {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 0;
+  gap: 16px;
+  padding: 10px 0 10px 14px;
   border-bottom: 1px solid #eceef3;
+  font-size: 1.05rem;
 }
 .schedule .row:last-child { border-bottom: none; }
-.schedule .row span:first-child { font-weight: 700; }
-.schedule .row span:last-child { text-align: right; }
+.schedule .time { min-width: 6.2em; font-weight: 600; color: var(--muted); }
 
 blockquote {
   margin: 16px 0;
