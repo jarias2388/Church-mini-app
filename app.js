@@ -92,3 +92,30 @@
     window.location.href = url;
   });
 })();
+
+// "Copiar" buttons: copy text (e.g. the Zelle email) so people can paste it in their bank app
+(function () {
+  document.querySelectorAll("button.copy").forEach(function (btn) {
+    var label = btn.textContent;
+    btn.addEventListener("click", function () {
+      var text = document.getElementById(btn.getAttribute("data-copy")).textContent.trim();
+      function done() {
+        btn.textContent = "¡Copiado!";
+        btn.classList.add("done");
+        setTimeout(function () { btn.textContent = label; btn.classList.remove("done"); }, 2000);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else {
+        fallback();
+      }
+      function fallback() {
+        var t = document.createElement("textarea");
+        t.value = text; t.setAttribute("readonly", ""); t.style.position = "absolute"; t.style.left = "-9999px";
+        document.body.appendChild(t); t.select(); t.setSelectionRange(0, text.length);
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(t);
+      }
+    });
+  });
+})();

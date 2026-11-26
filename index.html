@@ -8,6 +8,9 @@
   <meta name="theme-color" content="#1b1b22" />
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -179,19 +182,24 @@
     <!-- 5. OFRENDAS Y DIEZMOS -->
     <section id="pagina-ofrendas" class="page" hidden>
       <a href="#" class="back">‹ Volver</a>
-      <h1>Ofrendas y Diezmos</h1>
-      <blockquote>
-        "Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre."
+
+      <blockquote class="verse">
+        <p>“Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre.”</p>
         <cite>2 Corintios 9:7</cite>
       </blockquote>
-      <h2>Formas de dar</h2>
-      <ul>
-        <li><strong>En persona:</strong> durante el servicio.</li>
-        <li><strong>Zelle:</strong> correo@ejemplo.com</li>
-        <li><strong>En línea:</strong> enlace de donación</li>
-      </ul>
-      <!-- Reemplace "#" con el enlace de donación de la iglesia -->
-      <a class="button" href="#" target="_blank" rel="noopener">Dar en línea</a>
+
+      <h1>Ofrendas y Diezmos</h1>
+
+      <div class="card give">
+        <h2>Zelle</h2>
+        <p class="give-detail" id="zelle-email">IPBTesoreria@gmail.com</p>
+        <button type="button" class="copy" data-copy="zelle-email">Copiar correo</button>
+      </div>
+
+      <div class="card give">
+        <h2>Efectivo</h2>
+        <p class="give-detail">Pregunte por el tesorero.</p>
+      </div>
     </section>
 
     <!-- 6. REDES SOCIALES -->
