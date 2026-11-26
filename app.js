@@ -7,7 +7,8 @@
 
   function render() {
     var id = location.hash.replace("#", "");
-    var target = id && document.getElementById(id);
+    // sections are named "pagina-<name>" so the browser doesn't jump down to them
+    var target = id && document.getElementById("pagina-" + id);
     var isPage = target && target.classList.contains("page");
 
     menu.hidden = !!isPage;
