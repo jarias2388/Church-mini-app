@@ -6,7 +6,7 @@ A simple mobile-friendly website people open by scanning a QR code. Nothing to d
 - `index.html`: all the content (Visitantes, Anuncios, Horario de Servicios, Nuestra Misión, Ofrendas y Diezmos). Edit the text here.
 - `styles.css`: colors and layout. Change `--primary` and `--accent` at the top to match the church colors.
 - `app.js`: switches between the menu and each section.
-- `logo.svg`: placeholder logo. Replace it with the church logo. If your file is a PNG, name it `logo.png` and update the `src` in `index.html`.
+- `logo.jpg`: the church logo.
 
 ## Preview locally
 Open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000.

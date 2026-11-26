@@ -1,6 +1,6 @@
 :root {
   --primary: #1f3a68;
-  --accent: #c9a227;
+  --accent: #c9a227; /* gold, matches the logo */
   --bg: #f5f6fa;
   --card: #ffffff;
   --text: #1d2433;
@@ -23,16 +23,16 @@ body {
 
 /* Header: logo + church name */
 .header {
-  background: var(--primary);
-  color: #fff;
+  background: #fff;
+  color: var(--primary);
   text-align: center;
-  padding: calc(24px + env(safe-area-inset-top)) 16px 20px;
+  padding: calc(20px + env(safe-area-inset-top)) 16px 16px;
+  border-bottom: 4px solid var(--accent);
 }
 .brand { color: inherit; text-decoration: none; display: inline-block; }
 .logo {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
+  width: 160px;
+  height: auto;
   display: block;
   margin: 0 auto 10px;
 }
@@ -41,7 +41,6 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  opacity: 0.9;
 }
 
 main {
