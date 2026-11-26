@@ -251,7 +251,7 @@ blockquote cite { display: block; margin-top: 6px; font-style: normal; font-weig
 
 /* Ofrendas: Bible verse in a different font, royal blue */
 .verse {
-  margin: 12px 0 8px;
+  margin: 12px -6px 8px; /* a little wider than the page text so the verse fits in 3 lines */
   padding: 0;
   background: none;
   border: none;
@@ -263,8 +263,9 @@ blockquote cite { display: block; margin-top: 6px; font-style: normal; font-weig
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 500;
-  font-size: 1.35rem;
+  font-size: clamp(0.94rem, 4.9vw, 1.2rem); /* sized so the verse fits in 3 lines on phones */
   line-height: 1.45;
+  text-wrap: balance; /* evens out the lines so no word is left alone */
   color: #4169e1; /* royal blue */
 }
 .verse cite {
