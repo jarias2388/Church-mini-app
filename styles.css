@@ -38,7 +38,7 @@ body {
   position: absolute;
   inset: -30px; /* oversize so the blur has no soft edges */
   background: url("header-photo.jpg") center 30% / cover no-repeat;
-  filter: blur(2.5px);
+  filter: blur(1.5px);
   z-index: -2;
 }
 /* dark tint so the gold logo and white name stand out */
