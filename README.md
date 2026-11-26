@@ -8,6 +8,7 @@ A simple mobile-friendly website people open by scanning a QR code. Nothing to d
 - `app.js`: switches between the menu and each section.
 - `logo.png`: the church logo (transparent background).
 - `header-photo.jpg`: the photo behind the header (shown blurred). Replace it to change the background.
+- `visitantes-photo.jpg`: the header photo shown on the Visitantes page.
 
 ## Preview locally
 Open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000.

@@ -45,6 +45,11 @@ body {
   filter: blur(1.5px);
   z-index: -2;
 }
+/* header photo for the Visitantes page */
+.header[data-page="visitantes"]::before {
+  background-image: url("visitantes-photo.jpg");
+  background-position: center top;
+}
 /* dark tint so the gold logo and white name stand out */
 .header::after {
   content: "";

@@ -3,6 +3,7 @@
 (function () {
   var menu = document.getElementById("menu");
   var pages = document.querySelectorAll(".page");
+  var header = document.querySelector(".header");
 
   function render() {
     var id = location.hash.replace("#", "");
@@ -11,6 +12,8 @@
 
     menu.hidden = !!isPage;
     pages.forEach(function (p) { p.hidden = p !== target; });
+    // lets a page use its own header photo (see styles.css: .header[data-page=...])
+    header.setAttribute("data-page", isPage ? id : "menu");
     window.scrollTo(0, 0);
   }
 
