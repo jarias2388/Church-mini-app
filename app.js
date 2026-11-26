@@ -31,6 +31,19 @@
     btn.addEventListener("click", function () { via = btn.getAttribute("data-via"); });
   });
 
+  // Show the extra question that goes with the chosen "¿Cómo se enteró?" answer
+  var como = form.elements.como;
+  var followups = form.querySelectorAll(".followup");
+  function showFollowup() {
+    followups.forEach(function (f) { f.hidden = f.getAttribute("data-for") !== como.value; });
+  }
+  como.addEventListener("change", showFollowup);
+  showFollowup();
+
+  var otro = form.elements.otro;
+  var otroCount = document.getElementById("v-otro-count");
+  otro.addEventListener("input", function () { otroCount.textContent = otro.value.length; });
+
   function val(name) {
     var el = form.elements[name];
     if (!el) return "";
@@ -53,7 +66,13 @@
     if (val("telefono")) lines.push("Teléfono: " + val("telefono"));
     if (val("email")) lines.push("Correo: " + val("email"));
     lines.push("Primera visita: " + val("primera"));
-    if (val("como")) lines.push("Cómo se enteró: " + val("como"));
+    var heard = {
+      miembro: "Invitado por un miembro" + (val("miembro") ? " (" + val("miembro") + ")" : ""),
+      redes: "Redes sociales" + (val("red") ? " (" + val("red") + ")" : ""),
+      vi: "Vi la iglesia",
+      otro: "Otro" + (val("otro") ? ": " + val("otro") : "")
+    }[val("como")];
+    if (heard) lines.push("Cómo se enteró: " + heard);
     if (val("oracion")) lines.push("Petición de oración: " + val("oracion"));
     lines.push("Desea ser contactado: " + val("contacto"));
     var text = encodeURIComponent(lines.join("\n"));

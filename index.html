@@ -82,12 +82,35 @@
         <label for="v-como">¿Cómo se enteró de nosotros?</label>
         <select id="v-como" name="como">
           <option value="">Seleccione una opción</option>
-          <option>Familiar o amigo</option>
-          <option>Redes sociales</option>
-          <option>Internet</option>
-          <option>Pasaba por aquí</option>
-          <option>Otro</option>
+          <option value="miembro">Invitado por un miembro</option>
+          <option value="redes">Redes sociales</option>
+          <option value="vi">Vi la iglesia</option>
+          <option value="otro">Otro</option>
         </select>
+
+        <!-- Aparece solo si escogen "Invitado por un miembro" -->
+        <div class="followup" data-for="miembro" hidden>
+          <label for="v-miembro">Nombre del miembro que le invitó</label>
+          <input id="v-miembro" name="miembro" type="text" maxlength="60" />
+        </div>
+
+        <!-- Aparece solo si escogen "Redes sociales" -->
+        <div class="followup" data-for="redes" role="radiogroup" aria-labelledby="v-red-label" hidden>
+          <p id="v-red-label" class="group-label">¿En cuál red social?</p>
+          <div class="platforms">
+            <label class="choice"><input type="radio" name="red" value="Instagram" /> Instagram</label>
+            <label class="choice"><input type="radio" name="red" value="Facebook" /> Facebook</label>
+            <label class="choice"><input type="radio" name="red" value="YouTube" /> YouTube</label>
+            <label class="choice"><input type="radio" name="red" value="Google" /> Google</label>
+          </div>
+        </div>
+
+        <!-- Aparece solo si escogen "Otro" (máximo 100 letras) -->
+        <div class="followup" data-for="otro" hidden>
+          <label for="v-otro">Cuéntenos cómo nos conoció</label>
+          <input id="v-otro" name="otro" type="text" maxlength="100" />
+          <p class="counter"><span id="v-otro-count">0</span>/100</p>
+        </div>
 
         <label for="v-oracion">Petición de oración</label>
         <textarea id="v-oracion" name="oracion" rows="4" placeholder="¿Cómo podemos orar por usted?"></textarea>

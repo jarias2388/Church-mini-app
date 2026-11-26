@@ -206,3 +206,8 @@ blockquote cite { display: block; margin-top: 6px; font-style: normal; font-weig
 .form .button.whatsapp { background: #25d366; color: #fff; }
 .form .button.sms { background: var(--primary); margin-top: 12px; }
 .form-note { color: var(--muted); font-size: 0.9rem; text-align: center; margin: 12px 0 0; }
+.followup { margin-top: 4px; padding: 2px 0 2px 14px; border-left: 3px solid var(--accent); }
+.group-label { font-weight: 600; margin: 14px 0 0; }
+.platforms { display: grid; grid-template-columns: 1fr 1fr; }
+.form .platforms .choice { margin: 8px 0 0; }
+.counter { color: var(--muted); font-size: 0.85rem; text-align: right; margin: 4px 0 0; }
