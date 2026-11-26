@@ -179,3 +179,30 @@ blockquote cite { display: block; margin-top: 6px; font-style: normal; font-weig
 .instagram { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); }
 .youtube { background: #ff0000; }
 .tiktok { background: #111; }
+
+/* Visitor card form */
+.form { display: flex; flex-direction: column; }
+.form label { font-weight: 600; margin: 14px 0 6px; }
+.form label:first-child { margin-top: 0; }
+.form input[type="text"], .form input[type="tel"], .form input[type="email"], .form select, .form textarea {
+  font: inherit;
+  font-size: 16px; /* 16px stops iPhone from zooming in when typing */
+  padding: 12px;
+  border: 1px solid #cfd5df;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  width: 100%;
+}
+.form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+.form fieldset { border: none; padding: 0; margin: 14px 0 0; }
+.form legend { font-weight: 600; margin-bottom: 4px; padding: 0; }
+.form .choice { display: flex; align-items: center; gap: 10px; font-weight: 400; margin: 8px 0 0; }
+.form .choice input { width: 22px; height: 22px; accent-color: var(--primary); flex: none; }
+.form fieldset .choice { display: inline-flex; margin-right: 24px; }
+.req { color: #c0392b; }
+.form-error { color: #c0392b; font-weight: 600; margin: 12px 0 0; }
+.form .button { border: none; font: inherit; font-weight: 700; font-size: 1.05rem; cursor: pointer; width: 100%; }
+.form .button.whatsapp { background: #25d366; color: #fff; }
+.form .button.sms { background: var(--primary); margin-top: 12px; }
+.form-note { color: var(--muted); font-size: 0.9rem; text-align: center; margin: 12px 0 0; }

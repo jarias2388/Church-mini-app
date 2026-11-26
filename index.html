@@ -57,16 +57,52 @@
     <section id="visitantes" class="page" hidden>
       <a href="#" class="back">‹ Volver</a>
       <h1>Visitantes</h1>
-      <p>¡Bienvenido! Nos alegra mucho que nos visite hoy. Esperamos que se sienta como en casa.</p>
-      <h2>¿Qué esperar?</h2>
-      <ul>
-        <li>Alabanza y adoración</li>
-        <li>Predicación de la Palabra de Dios</li>
-        <li>Oración por sus necesidades</li>
-        <li>Ministerio para niños durante el servicio</li>
-      </ul>
-      <h2>Queremos conocerle</h2>
-      <p>Por favor, salude a uno de nuestros ujieres o pase por la mesa de bienvenida al final del servicio.</p>
+      <p>¡Bienvenido! Nos alegra mucho que nos visite. Por favor llene esta tarjeta para que podamos conocerle mejor.</p>
+
+      <!--
+        TELÉFONO DE LA IGLESIA: cambie data-phone por el número que recibirá las tarjetas.
+        Solo números, con el 1 al principio (ejemplo: 19545551234).
+      -->
+      <form id="visitor-form" class="card form" data-phone="19540000000" novalidate>
+        <label for="v-nombre">Nombre completo <span class="req">*</span></label>
+        <input id="v-nombre" name="nombre" type="text" autocomplete="name" required />
+
+        <label for="v-telefono">Teléfono</label>
+        <input id="v-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" />
+
+        <label for="v-email">Correo electrónico</label>
+        <input id="v-email" name="email" type="email" autocomplete="email" />
+
+        <fieldset>
+          <legend>¿Es su primera visita?</legend>
+          <label class="choice"><input type="radio" name="primera" value="Sí" checked /> Sí</label>
+          <label class="choice"><input type="radio" name="primera" value="No" /> No</label>
+        </fieldset>
+
+        <label for="v-como">¿Cómo se enteró de nosotros?</label>
+        <select id="v-como" name="como">
+          <option value="">Seleccione una opción</option>
+          <option>Familiar o amigo</option>
+          <option>Redes sociales</option>
+          <option>Internet</option>
+          <option>Pasaba por aquí</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="v-oracion">Petición de oración</label>
+        <textarea id="v-oracion" name="oracion" rows="4" placeholder="¿Cómo podemos orar por usted?"></textarea>
+
+        <label class="choice">
+          <input type="checkbox" name="contacto" value="Sí" checked />
+          Me gustaría que alguien de la iglesia me contacte
+        </label>
+
+        <p id="v-error" class="form-error" role="alert" hidden>Por favor escriba su nombre.</p>
+
+        <button type="submit" class="button whatsapp" data-via="whatsapp">Enviar por WhatsApp</button>
+        <button type="submit" class="button sms" data-via="sms">Enviar por mensaje de texto</button>
+        <p class="form-note">Se abrirá su aplicación con el mensaje listo. Solo presione <strong>enviar</strong>.</p>
+      </form>
     </section>
 
     <!-- 2. ANUNCIOS -->
