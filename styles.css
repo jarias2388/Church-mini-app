@@ -46,10 +46,19 @@ body {
   z-index: -2;
 }
 /* header photo for the Visitantes page */
-.header[data-page="visitantes"]::before {
-  background-image: url("visitantes-photo.jpg");
-  background-position: center top;
+/* Visitantes page: the photo alone fills the header (no logo/name, no blur, no tint) */
+.header[data-page="visitantes"] {
+  aspect-ratio: 16 / 9; /* same shape as the photo, so the whole picture shows */
+  padding: 0;
 }
+.header[data-page="visitantes"] .brand { display: none; }
+.header[data-page="visitantes"]::before {
+  inset: 0;
+  background-image: url("visitantes-photo.jpg");
+  background-position: center;
+  filter: none;
+}
+.header[data-page="visitantes"]::after { display: none; }
 /* dark tint so the gold logo and white name stand out */
 .header::after {
   content: "";
