@@ -153,3 +153,24 @@ blockquote cite { display: block; margin-top: 6px; font-style: normal; font-weig
 .footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 16px; }
 
 [hidden] { display: none !important; }
+
+/* Social media links */
+.social { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.social-link:active { transform: scale(0.98); }
+.social-link .chevron { font-size: 1.6rem; opacity: 0.85; }
+.facebook { background: #1877f2; }
+.instagram { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); }
+.youtube { background: #ff0000; }
+.tiktok { background: #111; }
