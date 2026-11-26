@@ -49,26 +49,31 @@ body {
 /* Pages with their own header photo: the photo alone fills the header (no logo/name, no blur, no tint) */
 .header[data-page="visitantes"],
 .header[data-page="horarios"],
-.header[data-page="ofrendas"] {
+.header[data-page="ofrendas"],
+.header[data-page="redes"] {
   aspect-ratio: 16 / 9; /* about the shape of the photos, so the whole picture shows */
   padding: 0;
 }
 .header[data-page="visitantes"] .brand,
 .header[data-page="horarios"] .brand,
-.header[data-page="ofrendas"] .brand { display: none; }
+.header[data-page="ofrendas"] .brand,
+.header[data-page="redes"] .brand { display: none; }
 .header[data-page="visitantes"]::before,
 .header[data-page="horarios"]::before,
-.header[data-page="ofrendas"]::before {
+.header[data-page="ofrendas"]::before,
+.header[data-page="redes"]::before {
   inset: 0;
   background-position: center;
   filter: none;
 }
 .header[data-page="visitantes"]::after,
 .header[data-page="horarios"]::after,
-.header[data-page="ofrendas"]::after { display: none; }
+.header[data-page="ofrendas"]::after,
+.header[data-page="redes"]::after { display: none; }
 .header[data-page="visitantes"]::before { background-image: url("visitantes-photo.jpg"); }
 .header[data-page="horarios"]::before { background-image: url("horarios-photo.jpg"); }
 .header[data-page="ofrendas"]::before { background-image: url("ofrendas-photo.jpg"); }
+.header[data-page="redes"]::before { background-image: url("redes-photo.jpg"); }
 /* dark tint so the gold logo and white name stand out */
 .header::after {
   content: "";
