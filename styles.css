@@ -209,7 +209,8 @@ blockquote cite { display: block; margin-top: 6px; font-style: normal; font-weig
 .facebook { background: #1877f2; }
 .instagram { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); }
 .youtube { background: #ff0000; }
-.tiktok { background: #111; }
+.google { background: #fff; color: #5f6368; border: 1px solid #dadce0; }
+.g-b { color: #4285f4; } .g-r { color: #ea4335; } .g-y { color: #fbbc05; } .g-g { color: #34a853; }
 
 /* Visitor card form */
 .form { display: flex; flex-direction: column; }
