@@ -36,8 +36,8 @@ body {
 .header::before {
   content: "";
   position: absolute;
-  inset: -30px; /* oversize so the blur has no soft edges */
-  background: url("header-photo.jpg") center 30% / cover no-repeat;
+  inset: -6px; /* slightly oversized so the blur has no soft edges */
+  background: url("header-photo.jpg") center top / cover no-repeat;
   filter: blur(1.5px);
   z-index: -2;
 }
@@ -48,6 +48,15 @@ body {
   inset: 0;
   background: radial-gradient(ellipse at center, rgba(10, 12, 20, 0.45) 0%, rgba(10, 12, 20, 0.7) 100%);
   z-index: -1;
+}
+/* on wide screens (tablets/computers) make the header taller so everyone's head shows */
+@media (min-width: 700px) {
+  .header {
+    min-height: 26vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .brand { color: inherit; text-decoration: none; display: inline-block; }
 .logo {
