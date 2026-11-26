@@ -129,19 +129,22 @@
     </section>
 
     <!-- 2. ANUNCIOS -->
+    <!--
+      Cada anuncio = título + flyer. Para agregar uno, copie un bloque <article> completo,
+      cambie el título y ponga la imagen del flyer en la carpeta "flyers".
+    -->
     <section id="anuncios" class="page" hidden>
       <a href="#" class="back">‹ Volver</a>
       <h1>Anuncios</h1>
-      <article class="card">
-        <h2>Título del anuncio</h2>
-        <p class="meta">Domingo, 1 de diciembre · 11:00 AM</p>
-        <p>Descripción del evento o anuncio.</p>
+
+      <article class="announcement">
+        <h2>Título del evento</h2>
+        <a href="flyers/ejemplo.svg" target="_blank" rel="noopener" aria-label="Ver flyer en tamaño completo">
+          <img src="flyers/ejemplo.svg" alt="Flyer: Título del evento" loading="lazy" />
+        </a>
       </article>
-      <article class="card">
-        <h2>Otro anuncio</h2>
-        <p class="meta">Fecha · Hora</p>
-        <p>Descripción del evento o anuncio.</p>
-      </article>
+
+      <p class="form-note">Toque un flyer para verlo en tamaño completo.</p>
     </section>
 
     <!-- 3. HORARIO DE SERVICIOS -->

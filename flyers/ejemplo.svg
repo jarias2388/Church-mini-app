@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <!-- Sample flyer: replace with the real event flyer -->
+  <rect width="800" height="1000" fill="#1f3a68"/>
+  <rect x="30" y="30" width="740" height="940" fill="none" stroke="#c9a227" stroke-width="6"/>
+  <text x="400" y="430" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" text-anchor="middle">Flyer del evento</text>
+  <text x="400" y="520" fill="#c9a227" font-family="Helvetica, Arial, sans-serif" font-size="40" text-anchor="middle">(imagen de ejemplo)</text>
+</svg>

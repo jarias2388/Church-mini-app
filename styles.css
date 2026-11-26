@@ -225,3 +225,14 @@ blockquote cite { display: block; margin-top: 6px; font-style: normal; font-weig
 .platforms { display: grid; grid-template-columns: 1fr 1fr; }
 .form .platforms .choice { margin: 8px 0 0; }
 .counter { color: var(--muted); font-size: 0.85rem; text-align: right; margin: 4px 0 0; }
+
+/* Announcements: title above each flyer */
+.announcement {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.announcement h2 { margin: 0; padding: 14px 16px; font-size: 1.15rem; border-left: 5px solid var(--accent); }
+.announcement img { display: block; width: 100%; height: auto; }
