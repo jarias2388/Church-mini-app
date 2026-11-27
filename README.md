@@ -12,6 +12,7 @@ A simple mobile-friendly website people open by scanning a QR code. Nothing to d
 - `horarios-photo.jpg`: the header photo shown on the Horario de Servicios page.
 - `ofrendas-photo.jpg`: the header photo shown on the Ofrendas y Diezmos page.
 - `redes-photo.jpg`: the header photo shown on the Redes Sociales page.
+- `anuncios-photo.jpg`: the header image shown on the Anuncios page.
 
 ## Preview locally
 Open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000.
