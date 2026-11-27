@@ -18,5 +18,8 @@ A simple mobile-friendly website people open by scanning a QR code. Nothing to d
 Open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000.
 
 ## Publishing (free)
-GitHub Pages can host this for free: repo **Settings → Pages → Deploy from branch → `main` / root**.
-The site will be at `https://<username>.github.io/church-mini-app/`. Make the QR code point to that URL.
+The site is hosted with GitHub Pages at **https://jarias2388.github.io/Church-mini-app/**
+
+To turn it on (one time): repo **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `claude/pensive-cori-37ojkw` / `(root)` → Save**. It goes live in a minute or two, and every later update to that branch goes live automatically.
+
+`qr-code.png` opens that address. Print it as large as you like; it stays sharp.
